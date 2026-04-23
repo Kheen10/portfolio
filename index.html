@@ -45,7 +45,7 @@
       transform: translateY(-3px);
     }
     .project-card-img {
-      width: 400px;
+      width: 445px;
       height: 400px;
       background-size: cover;
       background-position: center;
@@ -148,13 +148,34 @@
     /* ── Technical skills rows ── */
     .tech-skill-row {
       display: flex;
-      align-items: flex-start;
+      align-items: center;
       padding: 14px 0;
       border-bottom: 1px solid rgba(255,255,255,0.1);
       gap: 16px;
     }
     .tech-skill-row:last-child { border-bottom: none; }
-    .tech-skill-label { min-width: 160px; font-size: 13px; font-weight: 600; color: #e65100; padding-top: 3px; }
+    .tech-skill-label {
+      min-width: 120px;
+      max-width: 120px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    .tech-skill-label .label-name {
+      font-size: 13px;
+      font-weight: 600;
+      color: #e65100;
+      line-height: 1;
+    }
+    .tech-skill-label img {
+      width: 64px;
+      height: 40px;
+      object-fit: contain;
+      object-position: left center;
+      display: block;
+      filter: brightness(1.15);
+    }
     .tech-skill-tools { flex: 1; font-size: 13px; color: #cccccc; line-height: 1.8; }
 
     /* ── FIX 4: Quote strip ── */
@@ -182,6 +203,15 @@
       line-height: 1;
       margin-bottom: 16px;
       font-family: Georgia, serif;
+    }
+    .slider-item .text h1 {
+      font-size: 32px !important;
+      line-height: 1.3 !important;
+      word-break: break-word;
+    }
+    .slider-item .text h2 {
+      font-size: 18px !important;
+      line-height: 1.5 !important;
     }
   </style>
 </head>
@@ -223,7 +253,7 @@
             <div class="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
               <div class="text">
                 <span class="subheading">Hello!</span>
-                <h1 class="mb-4 mt-3">I'm <span>Khirhushihan Nithiyanantham</span></h1>
+                <h1 class="mb-4 mt-3" style="font-size:32px;line-height:1.3;">I'm <span>Khirhushihan<br>Nithiyanantham</span></h1>
                 <h2 class="mb-4">Electrical Engineering Undergraduate<br>University of Moratuwa</h2>
                 <p>
                   <a href="#projects-section" class="btn btn-primary py-3 px-4">View My Work</a>
@@ -289,7 +319,7 @@
           </div>
           <div class="counter-wrap ftco-animate d-flex mt-md-3">
             <div class="text">
-              <p><a href="#" class="btn btn-primary py-3 px-3">Download CV</a></p>
+              <a href="https://drive.google.com/uc?export=download&id=1PZInjAP2CUrE7aNe4vqrBymB7BX8ycEC" target="_blank" class="btn btn-primary py-3 px-3">Download CV</a>
             </div>
           </div>
         </div>
@@ -311,67 +341,109 @@
         <div class="col-md-6 ftco-animate">
           <h4 style="font-size:15px;font-weight:600;color:#aaaaa1;margin-bottom:16px;border-bottom:2px solid #F96D00;padding-bottom:8px;">Power Systems &amp; Protection</h4>
           <div class="tech-skill-row">
-            <span class="tech-skill-label"><img src="images/PSSE_logo.png" width="20" height="20" style="object-fit:contain;vertical-align:middle;margin-right:7px;">PSSE</span>
+            <span class="tech-skill-label">
+              <span class="label-name">PSSE</span>
+              <img src="images/PSSE_logo.png">
+            </span>
             <span class="tech-skill-tools">Modelled a 12-bus power network; determined optimal generation dispatch for peak and off-peak conditions; verified that the system maintains secure operation under N-1 contingency without line or transformer overloading. Results independently cross-verified using Python.</span>
           </div>
           <div class="tech-skill-row">
-            <span class="tech-skill-label"><img src="images/ETAP_logo.png" width="20" height="20" style="object-fit:contain;vertical-align:middle;margin-right:7px;">ETAP</span>
+            <span class="tech-skill-label">
+              <span class="label-name">ETAP</span>
+              <img src="images/ETAP_logo.png">
+            </span>
             <span class="tech-skill-tools">Coordinated a 3-breaker commercial network (1 upstream, 2 downstream) during a professional workshop; set time-current tripping curves and validated correct discrimination by introducing a simulated fault — confirming only the intended breaker operated.</span>
           </div>
           <h4 style="font-size:15px;font-weight:600;color:#aaaaa1;margin:28px 0 16px;border-bottom:2px solid #F96D00;padding-bottom:8px;">Building Electrical Services</h4>
           <div class="tech-skill-row">
-            <span class="tech-skill-label"><img src="images/DIALux_logo.png" width="20" height="20" style="object-fit:contain;vertical-align:middle;margin-right:7px;">DIALux evo</span>
+            <span class="tech-skill-label">
+              <span class="label-name">DIALux evo</span>
+              <img src="images/DIALux_logo.png">
+            </span>
             <span class="tech-skill-tools">Identified that the existing computer lab illuminance of 324 lux fell below the recommended standard for educational workspaces; redesigned the luminaire layout to achieve 498 lux, bringing the space into compliance. Generated a full professional lighting report.</span>
           </div>
           <div class="tech-skill-row">
-            <span class="tech-skill-label"><img src="images/Revit_logo.png" width="20" height="20" style="object-fit:contain;vertical-align:middle;margin-right:7px;">Revit MEP</span>
+            <span class="tech-skill-label">
+              <span class="label-name">Revit MEP</span>
+              <img src="images/Revit_logo.png">
+            </span>
             <span class="tech-skill-tools">Developed basic MEP drawings in a BIM environment; gained practical understanding of how electrical, mechanical, and plumbing services are spatially coordinated within a 3D building model — directly relevant to building services engineering workflows.</span>
           </div>
           <div class="tech-skill-row">
-            <span class="tech-skill-label"><img src="images/eQUEST_logo.png" width="20" height="20" style="object-fit:contain;vertical-align:middle;margin-right:7px;">eQUEST</span>
+            <span class="tech-skill-label">
+              <span class="label-name">eQUEST</span>
+              <img src="images/eQUEST_logo.png">
+            </span>
             <span class="tech-skill-tools">Modelled a core-and-perimeter office building; input occupancy schedules, envelope properties, and HVAC parameters to simulate annual energy consumption and operating cost — providing data applicable to energy audits and green building assessment.</span>
           </div>
           <h4 style="font-size:15px;font-weight:600;color:#aaaaa1;margin:28px 0 16px;border-bottom:2px solid #F96D00;padding-bottom:8px;">GIS &amp; Data</h4>
           <div class="tech-skill-row">
-            <span class="tech-skill-label"><img src="images/ArcMap_logo.png" width="20" height="20" style="object-fit:contain;vertical-align:middle;margin-right:7px;">ArcMap 10.5</span>
+            <span class="tech-skill-label">
+              <span class="label-name">ArcMap 10.5</span>
+              <img src="images/ArcMap_logo.png">
+            </span>
             <span class="tech-skill-tools">During internship at LECO Negombo: updated the live distribution network GIS map with newly installed field components; identified 16 candidate locations for new NMD installations within the existing network using spatial analysis.</span>
           </div>
         </div>
         <div class="col-md-6 ftco-animate">
           <h4 style="font-size:15px;font-weight:600;color:#aaaaa1;margin-bottom:16px;border-bottom:2px solid #F96D00;padding-bottom:8px;">Simulation &amp; Design</h4>
           <div class="tech-skill-row">
-            <span class="tech-skill-label"><img src="images/MATLAB_logo.png" width="20" height="20" style="object-fit:contain;vertical-align:middle;margin-right:7px;">MATLAB</span>
+            <span class="tech-skill-label">
+              <span class="label-name">MATLAB</span>
+              <img src="images/MATLAB_logo.png">
+            </span>
             <span class="tech-skill-tools">Developed a fuzzy logic-based secondary EV charging controller for a weak distribution grid with high PV penetration — improved bus voltage from 0.92 pu to 0.95 pu under coordinated charging. Also completed motor design and filter analysis simulations across undergraduate modules.</span>
           </div> 
           <div class="tech-skill-row">
-            <span class="tech-skill-label"><img src="images/LTSpice_logo.png" width="20" height="20" style="object-fit:contain;vertical-align:middle;margin-right:7px;">LTSpice</span>
+            <span class="tech-skill-label">
+              <span class="label-name">LTSpice</span>
+              <img src="images/LTSpice_logo.png">
+            </span>
             <span class="tech-skill-tools">Simulated and analysed analogue circuits including filters and rectifiers; performed transient and AC frequency response analysis as part of undergraduate circuit design modules.</span>
           </div>
           <div class="tech-skill-row">
-            <span class="tech-skill-label"><img src="images/SolidWorks_logo.png" width="20" height="20" style="object-fit:contain;vertical-align:middle;margin-right:7px;">SolidWorks</span>
+            <span class="tech-skill-label">
+              <span class="label-name">SolidWorks</span>
+              <img src="images/SolidWorks_logo.png">
+            </span>
             <span class="tech-skill-tools">Created 3D mechanical part models and assemblies during undergraduate coursework; developed foundational understanding of mechanical design relevant to enclosure and component housing in electrical systems.</span>
           </div>
           <h4 style="font-size:15px;font-weight:600;color:#aaaaa1;margin:28px 0 16px;border-bottom:2px solid #F96D00;padding-bottom:8px;">Embedded Systems &amp; Automation</h4>
           <div class="tech-skill-row">
-            <span class="tech-skill-label"><img src="images/LabVIEW_logo.png" width="20" height="20" style="object-fit:contain;vertical-align:middle;margin-right:7px;">LabVIEW</span>
+            <span class="tech-skill-label">
+              <span class="label-name">LabVIEW</span>
+              <img src="images/LabVIEW_logo.png">
+            </span>
             <span class="tech-skill-tools">Built a real-time fire detection and suppression system using a DAQ card with IR flame and gas sensors; when a trigger was detected, the system automatically activated a water spray motor and opened a CO₂ release valve — all controlled and monitored through a LabVIEW interface.</span>
           </div>
           <div class="tech-skill-row">
-            <span class="tech-skill-label"><img src="images/ESP32_logo.png" width="20" height="20" style="object-fit:contain;vertical-align:middle;margin-right:7px;">ESP32 / IoT</span>
+            <span class="tech-skill-label">
+              <span class="label-name">ESP32 / IoT</span>
+              <img src="images/ESP32_logo.png">
+            </span>
             <span class="tech-skill-tools">Designed and simulated an ESP32-based smart medicine reminder using Wokwi; the system monitors temperature and humidity, sounds an alarm when readings exceed thresholds, and allows a remote user to monitor live sensor data via Wi-Fi connectivity.</span>
           </div>
           <div class="tech-skill-row">
-            <span class="tech-skill-label"><img src="images/FactoryIO_logo.png" width="20" height="20" style="object-fit:contain;vertical-align:middle;margin-right:7px;">Factory IO</span>
+            <span class="tech-skill-label">
+              <span class="label-name">Factory IO</span>
+              <img src="images/FactoryIO_logo.png">
+            </span>
             <span class="tech-skill-tools">Simulated industrial automation sequences including conveyor control, sensor-triggered actuator responses, and ladder logic programming — developing practical understanding of PLC-based control systems used in manufacturing environments.</span>
           </div>
           <h4 style="font-size:15px;font-weight:600;color:#aaaaa1;margin:28px 0 16px;border-bottom:2px solid #F96D00;padding-bottom:8px;">Renewables</h4>
           <div class="tech-skill-row">
-            <span class="tech-skill-label"><img src="images/PVSyst_logo.png" width="20" height="20" style="object-fit:contain;vertical-align:middle;margin-right:7px;">PVSyst</span>
+            <span class="tech-skill-label">
+              <span class="label-name">PVSyst</span>
+              <img src="images/PVSyst_logo.png">
+            </span>
             <span class="tech-skill-tools">Designed an 18 kWp rooftop solar PV system for Batticaloa, Sri Lanka; simulation yielded 27.7 MWh/yr annual production with a Performance Ratio of 0.82 — demonstrating strong system efficiency for a tropical high-irradiance location.</span>
           </div>
           <h4 style="font-size:15px;font-weight:600;color:#aaaaa1;margin:28px 0 16px;border-bottom:2px solid #F96D00;padding-bottom:8px;">Programming</h4>
           <div class="tech-skill-row">
-            <span class="tech-skill-label"><img src="images/Python_logo.png" width="20" height="20" style="object-fit:contain;vertical-align:middle;margin-right:7px;">Python</span>
+            <span class="tech-skill-label">
+              <span class="label-name">Python</span>
+              <img src="images/Python_logo.png">
+            </span>
             <span class="tech-skill-tools">Wrote Python scripts to independently cross-verify load flow and contingency results from PSSE; parsed simulation output data, performed numerical comparison, and flagged discrepancies — applying programming directly to power engineering validation workflows.</span>
           </div>
         </div>
@@ -481,11 +553,14 @@
               <span class="project-pill-overlay">Final Year Project</span>
             </div>
             <div class="project-card-body">
-              <h3>MATLAB Simulation — [Your FYP Topic]</h3>
+              <h3>Intelligent EV Charging Strategy for Weak Distribution Grids with High PV Penetration</h3>
               <div class="tools">
                 <span class="skill-tag">MATLAB</span>
+                <span class="skill-tag">Fuzzy Logic</span>
+                <span class="skill-tag">Optimisation</span>
+                <span class="skill-tag">Power Systems</span>
               </div>
-              <p>Designed and simulated [describe the system] using MATLAB. Developed a scripted model to analyze [key parameter], and validated simulation outputs against theoretical benchmarks. <em style="color:#e65100;">[Update with your actual FYP topic before publishing.]</em></p>
+              <p>Developed a two-level EV charging coordination system for distribution grids under high solar PV penetration. The central controller manages grid-level constraints — thermal line loading, transformer capacity, and voltage limits. A fuzzy logic secondary controller determines charging priority order among connected EVs based on real-time grid conditions. Voltage profile improved from 0.92 pu to 0.95 pu under coordinated charging versus an uncoordinated scenario.</p>
             </div>
           </div>
         </div>
@@ -497,13 +572,14 @@
               <span class="project-pill-overlay">Hardware Project</span>
             </div>
             <div class="project-card-body">
-              <h3>Fire Detection &amp; Prevention System</h3>
+              <h3>Automated Fire Detection &amp; Suppression System</h3>
               <div class="tools">
                 <span class="skill-tag">LabVIEW</span>
                 <span class="skill-tag">DAQ Card</span>
-                <span class="skill-tag">Sensors</span>
+                <span class="skill-tag">IR Sensor</span>
+                <span class="skill-tag">Gas Sensor</span>
               </div>
-              <p>Designed and built a real-time fire identification and prevention system using LabVIEW integrated with a hardware DAQ card. The system acquired live sensor data and triggered automated control responses for safety applications.</p>
+              <p>Designed and implemented a real-time fire detection and suppression system using LabVIEW with DAQ card hardware integration. IR flame sensors and gas sensors continuously monitor the environment. Upon detection, the system automatically activates a water spray motor and triggers CO₂ release — demonstrating closed-loop hardware control for a safety-critical application.</p>
             </div>
           </div>
         </div>
@@ -515,12 +591,13 @@
               <span class="project-pill-overlay">Power Systems</span>
             </div>
             <div class="project-card-body">
-              <h3>Power Network Analysis — N-1 Contingency &amp; Economic Dispatch</h3>
+              <h3>12-Bus Power Network — Economic Dispatch &amp; N-1 Security Analysis</h3>
               <div class="tools">
                 <span class="skill-tag">PSSE</span>
                 <span class="skill-tag">Python</span>
+                <span class="skill-tag">Load Flow</span>
               </div>
-              <p>Designed a power network in PSSE and performed economic dispatch optimisation to minimise generation cost. Evaluated N-1 contingency behaviour to assess grid security. Cross-verified all results using Python scripts for independent validation.</p>
+              <p>Modelled a 12-bus power network in PSSE and determined optimal generation dispatch for both peak and off-peak operating conditions. Performed N-1 contingency analysis to verify that the system remains secure under single outage events with no line or transformer overloading. All simulation results were independently cross-verified using Python scripts.</p>
             </div>
           </div>
         </div>
@@ -532,13 +609,14 @@
               <span class="project-pill-overlay">Embedded &amp; IoT</span>
             </div>
             <div class="project-card-body">
-              <h3>Smart Medibox — IoT-Connected Medicine Reminder</h3>
+              <h3>Smart Medibox — ESP32 IoT Environmental Monitor &amp; Alarm System</h3>
               <div class="tools">
                 <span class="skill-tag">ESP32</span>
-                <span class="skill-tag">IoT</span>
-                <span class="skill-tag">Online Simulation</span>
+                <span class="skill-tag">Wokwi</span>
+                <span class="skill-tag">Wi-Fi / Node Red</span>
+                <span class="skill-tag">Embedded C</span>
               </div>
-              <p>Designed and simulated a smart medicine box using an ESP32 microcontroller with IoT connectivity. Features included automated reminders and remote monitoring, coded and tested using online simulation tools.</p>
+              <p>Designed and simulated an ESP32-based smart medicine box using the Wokwi online simulation platform. The system continuously monitors ambient temperature and humidity; if readings exceed set thresholds, an audible alarm is triggered locally. Node-RED was used to build the IoT dashboard, enabling a remote user to visualise live sensor data over Wi-Fi — demonstrating a complete IoT pipeline from embedded sensor input through to cloud-accessible monitoring output.</p>
             </div>
           </div>
         </div>
@@ -553,8 +631,10 @@
               <h3>Computer Lab Lighting Redesign — University of Moratuwa</h3>
               <div class="tools">
                 <span class="skill-tag">DIALux evo</span>
+                <span class="skill-tag">Lighting Design</span>
+                <span class="skill-tag">Compliance Analysis</span>
               </div>
-              <p>Redesigned the lighting arrangement of an existing university computer lab. Optimised luminaire placement to achieve target illuminance levels and produced a full professional report demonstrating compliance with lighting standards for educational spaces.</p>
+              <p>Audited the existing lighting installation of a university computer lab and identified that the measured illuminance of 324 lux fell below the recommended standard for educational workspaces. Redesigned the luminaire layout in DIALux evo, achieving 498 lux — bringing the space into full compliance. Produced a professional lighting report including false-colour illuminance maps and point-by-point calculations.</p>
             </div>
           </div>
         </div>
@@ -566,11 +646,13 @@
               <span class="project-pill-overlay">Simulation</span>
             </div>
             <div class="project-card-body">
-              <h3>Motor Design &amp; Filter Analysis in MATLAB</h3>
+              <h3>Electrical Machine Design &amp; Signal Filter Analysis</h3>
               <div class="tools">
                 <span class="skill-tag">MATLAB</span>
+                <span class="skill-tag">Machine Design</span>
+                <span class="skill-tag">Signal Processing</span>
               </div>
-              <p>Completed multiple simulation assignments including electrical motor design and filter analysis. Applied MATLAB scripting to model and visualise system behaviour, translating engineering equations into working simulations.</p>
+              <p>Completed module-based simulation projects in MATLAB covering electrical motor design — calculating winding parameters, torque-speed characteristics, and performance outputs — alongside filter design assignments analysing frequency response, cut-off behaviour, and signal attenuation. Developed practical scripting and graphical analysis skills applied throughout the undergraduate programme.</p>
             </div>
           </div>
         </div>
@@ -582,11 +664,13 @@
               <span class="project-pill-overlay">Energy &amp; Sustainability</span>
             </div>
             <div class="project-card-body">
-              <h3>Building Energy Demand Modelling</h3>
+              <h3>Office Building Energy Simulation &amp; Cost Analysis</h3>
               <div class="tools">
                 <span class="skill-tag">eQUEST</span>
+                <span class="skill-tag">Energy Modelling</span>
+                <span class="skill-tag">Building Services</span>
               </div>
-              <p>Used eQUEST to perform energy demand analysis for a building by inputting architectural, occupancy, and system parameters. Generated energy consumption estimates relevant to green building assessment and energy audit workflows.</p>
+              <p>Modelled a core-and-perimeter office building in eQUEST by defining the architectural layout, occupancy profiles, HVAC system configuration, and envelope properties. Generated annual energy consumption and operating cost outputs — providing the data foundation for energy audit reporting and green building performance benchmarking.</p>
             </div>
           </div>
         </div>
@@ -598,11 +682,13 @@
               <span class="project-pill-overlay">Workshop</span>
             </div>
             <div class="project-card-body">
-              <h3>Protection Coordination Design — ETAP Workshop</h3>
+              <h3>Commercial Network Protection Coordination — ETAP Workshop</h3>
               <div class="tools">
                 <span class="skill-tag">ETAP</span>
+                <span class="skill-tag">Protection Design</span>
+                <span class="skill-tag">Fault Analysis</span>
               </div>
-              <p>Attended a professional ETAP workshop on downstream protection coordination. Designed circuit breaker configurations and selected devices based on tripping curve analysis to ensure correct discrimination between protective devices.</p>
+              <p>Participated in a professional ETAP workshop focused on protection coordination for a commercial electrical network. Designed a 3-breaker configuration (1 upstream, 2 downstream) and set time-current tripping curves to ensure selective discrimination. Validated the coordination by introducing a simulated fault — confirming that only the intended downstream breaker operated while the upstream device remained closed.</p>
             </div>
           </div>
         </div>
@@ -702,9 +788,9 @@
             <p>Electrical Engineering Undergraduate, University of Moratuwa. Passionate about power systems, automation, and sustainable energy solutions.</p>
             <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
               <li class="ftco-animate">
-                <a href="https://www.linkedin.com/in/YOUR-PROFILE-URL" target="_blank" title="LinkedIn" style="display:flex;align-items:center;justify-content:center;width:40px;height:40px;">
+                <a href="https://www.linkedin.com/in/khirhushihan" target="_blank" title="LinkedIn" style="display:flex;align-items:center;justify-content:center;width:40px;height:40px;">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.79２ ２４　１．７７１　２４ｈ２０．４５１Ｃ２３．２　２４　２４　２３．２２７　２４　２２．２７１Ｖ１．７２９Ｃ２４　．７７４　２３．２　０　２２．２２２　０ｈ．００３ｚ"/>
                   </svg>
                 </a>
               </li>
